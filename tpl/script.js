@@ -77,7 +77,7 @@ function search(){
         activeSearch=false;
         searchButton.style.backgroundColor='white';
     }
-    form.action='http://localhost:1337/search';
+    form.action='/search';
 }
 
 function cancel(){
@@ -96,7 +96,7 @@ function cancel(){
         activeDelete=false;
         deleteButton.style.backgroundColor='white';
     }
-    form.action='http://localhost:1337/delete';    
+    form.action='/delete';    
 }
 
 function insert(){
@@ -117,7 +117,7 @@ function insert(){
         activeInsert=false;
         insertButton.style.backgroundColor='white';
     }
-    form.action='http://localhost:1337/insert';    
+    form.action='/insert';    
 }
 
 
