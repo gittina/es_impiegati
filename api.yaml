@@ -1,0 +1,99 @@
+swagger: '2.0'
+info:
+  title: impiegati
+  description: definition of API in impiegati
+  version: "1.0.0"
+# the domain of the service
+host: api.uber.com
+# array of all schemes that your API supports
+schemes:
+  - https
+# will be prefixed to all paths
+basePath: /
+paths:
+  /:
+    get:
+      description: per ottenere home page
+      responses:
+        200:
+          description: home page ritornata correttamente a utente
+          schema:
+            title: Home Page
+            type: string
+        500: 
+          description: errore interno al server nel creare la pagina
+          
+    /search:
+    post:
+      description: cerca impiegato per id
+      parameters:
+        - name: id
+        in: query
+        description: id impiegato da cercare
+        required: true
+        type: string
+      responses:
+        200:
+          description: ricerca id andata a buon fine
+          schema:
+            title: Home Page
+            type: string
+        500: 
+          description: errore interno al server nel creare la pagina
+        
+    /delete:
+    post:
+      description: cancella impiegato per id
+      parameters:
+        - name: id
+        in: query
+        description: id impiegato da eliminare
+        required: true
+        type: string
+      responses:
+        200:
+          description: cancellazione id andata a buon fine
+          schema:
+            title: Home Page
+            type: string
+        500: 
+          description: errore interno al server nel creare la pagina
+          
+    /insert:
+    post:
+      description: inserisce impiegato
+      parameters:
+        - name: id
+        in: query
+        description: id impiegato
+        required: true
+        type: string
+        - name: name
+        in: query
+        description: nome impiegato
+        required: true
+        type: string
+        - name: surname
+        in: query
+        description: cognome impiegato
+        required: true
+        type: string
+        - name: level
+        in: query
+        description: livello impiegato
+        required: true
+        type: string
+        - name: salary
+        in: query
+        description: salario impiegato
+        required: true
+        type: string
+        
+      responses:
+        200:
+          description: inserimento eseguito correttamente
+          schema:
+            title: Home Page
+            type: string
+        500: 
+          description: errore interno al server nel creare la pagina
